@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* Main Grid Settings */
+
+section#grid {
+    width: 100%;
+    display: inline-grid;
+    padding: 3%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header  header  header""aside  main  main""article  main  main";
+    grid-gap: 1em;
+    outline: 0px solid rgb(255, 255, 255);
+}
+
+section#grid>div.divGrid#header {
+    grid-area: header;
+}
+
+.divGrid#main {
+    grid-area: main;
+    grid-row: 2/4;
+    grid-column: 2/4;
+    font-size: 1.1em;
+}
+
+section#grid>div.divGrid#aside {
+    grid-area: aside;
+}
+
+section#grid>div.divGrid#article {
+    grid-area: article;
+}
+
+/* Flexbox News Tiles for Index */
+
+section#news {
+    width: 100%;
+    display: flex;
+    padding: 3%;
+    justify-content: space-around;
+}
+
+/* Slide Overlays for Tiles */
+.container {
+    position: relative;
+    width: 30%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Mobile Devices: 0 to 480px */
+
+@media only screen and (max-width: 480px) {}
+
+
+/* Tablet Devices: 481px to 768px */
+
+@media only screen and (min-width: 481px) {}
+
+
+/* Desktop Devices: 769px and wider */
+
+@media only screen and (min-width: 769px) {}

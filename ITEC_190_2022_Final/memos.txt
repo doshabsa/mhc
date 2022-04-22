@@ -1,0 +1,6 @@
+Parallex for main page:
+    https://www.w3schools.com/howto/howto_css_parallax.asp
+
+TO DO:
+-    Edit main.js to work in a more stream-lined way (its clunky-functional)
+- 

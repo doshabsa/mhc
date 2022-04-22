@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+
+/* Gear Styles */
+section#gear {
+    display: flex;
+    flex-direction: row;
+    flex: inherit;
+    justify-content: space-between;
+    padding: 0% 5% 5%;
+}
+
+article#gear {
+    display: block;
+    width: 49.75%;
+}
+
+img#intro {
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 10px !important;
+}
+
+article>ol {
+    padding: 1.5% 5% 2%;
+    font-size: 1.2em;
+}
+
+a:visited,
+a:link {
+    color: rgba(128, 158, 59, 1);
+    text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: ease 0.25s;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: rgba(184, 69, 23, 1);
+    text-shadow: rgba(184, 69, 23, 0.5) 0px 10px 5px;
+    transition: color 0.1s ease-out;
+    transform: scale(1, 1) translateY(-5);
+}
+
+
+/* Detail Styles */
+section#details {
+    display: flex;
+    flex-direction: row;
+    flex: inherit;
+    justify-content: space-between;
+    padding: 0% 5% 5%;
+}
+
+article#details {
+    display: block;
+    width: 33%;
+}
+
+
+/* Image Styles */
+div#intro {
+    position: relative;
+    width: 100%;
+    margin: 2% auto 2%;
+    border-radius: 10px;
+}
+
+h1 > a:visited,
+h1 >  a:link {
+    color: rgba(230, 203, 189, 0.8);
+    text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: ease 0.25s;
+    text-decoration: none;
+}
+
+h1 > a:hover,
+h1 > a:active {
+    color: rgba(184, 69, 23, 1);
+    text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: ease 0.25s;
+    text-decoration: none;
+}
+
+p {
+    margin: 5%;
+}
+
+
+/* Mobile Devices: 0 to 550px */
+@media only screen and (max-width: 550px) {
+
+    img#intro {
+        display: none;
+    }
+
+    section#details {
+        display: flex;
+        flex-direction: column;
+        flex: inherit;
+        justify-content: space-between;
+    }
+
+    article#details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Tablet Devices: 481px to 768px */
+@media only screen and (min-width: 550px) {
+
+}
+
+/* Desktop Devices: 769px and wider */
+@media only screen and (min-width: 770px) {
+
+}

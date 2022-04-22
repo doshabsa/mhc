@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Catshop;
+    src: url('Catshop.ttf') format('truetype');
+    font-family: Headway;
+    src: url('headway.ttf') format('truetype');
+}
+
+
+/* Merch Outer Table Settings */
+
+section#merch {
+    width: 100%;
+    display: block;
+    padding: 3%;
+}
+
+/* Header Styles */
+
+
+/* Card Styles */
+#divCard {
+    content: "";
+    display: table;
+    clear: both;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    border: 2px solid rgb(252, 181, 56);
+    border-radius: 15px;
+    margin: 5%;
+    width: 94%;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#divCard:hover,
+#divCard:active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+#merchDetail {
+    height: auto;
+    float: right;
+    font-size: 1.2em;
+    padding: 2%;
+    padding-top: 5%;
+}
+
+#divCard h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: rgb(136, 15, 15);
+    text-shadow: rgba(27, 27, 27, 0.5) 0 4px 8px;
+}
+
+
+/* Merch Flexbox Styles */
+.merchContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.merchInner {
+    overflow: auto;
+    display: flex;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    width: 48%;
+    margin: 1%;
+    min-height: 50px;
+    border: 0px solid black;
+}
+
+
+/* Mobile Devices: 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+
+    #merchImage {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 1%;
+        border-radius: 5px;
+    }
+
+    #merchDetail {
+        width: 100%;
+    }
+
+    #divCard h3 {
+        padding-bottom: 0%;
+    }
+
+    #merchDetail>p {
+        display: none;
+    }
+}
+
+
+/* Tablet Devices: 481px to 768px */
+
+@media only screen and (min-width: 481px) {
+
+    #merchImage {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 1%;
+        border-radius: 5px;
+    }
+
+    #merchDetail {
+        width: 100%;
+    }
+
+}
+
+
+/* Desktop Devices: 769px and wider */
+
+@media only screen and (min-width: 769px) {
+
+    #merchImage {
+        float: left;
+        width: 40%;
+        height: auto;
+        padding: 1%;
+        border-radius: 5px;
+    }
+
+    #merchDetail {
+        width: 60%;
+    }
+
+}

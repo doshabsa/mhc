@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+section#calendar {
+   display: block;
+   width: 95%;
+   margin: 2em auto;
+   justify-content: center;
+}
+
+table#schedule {
+   width: 100%;
+   border: 2px solid rgb(27, 27, 27);
+   border-collapse: collapse;
+   table-layout: fixed;
+   font-size: 1.2em;
+}
+
+table#schedule tr>th,
+table#schedule tr>td {
+   border: 1px solid rgb(27, 27, 27);
+   text-align: center;
+   padding: 0.5%;
+}
+
+
+/* Table Caption Styles */
+caption {
+   caption-side: bottom;
+   text-align: center;
+}
+
+
+/* Table Column Styles */
+.wDayColumns {
+   width: 14%;
+   background-color: rgba(136, 15, 15, 0.2);
+}
+
+.wEndColumns {
+   column-width: 14%;
+   background-color: rgba(252, 181, 56, 0.2);
+}
+
+
+/* Table Header Styles */
+thead {
+   color: white;
+   background-color: rgb(136, 15, 15);
+}
+
+
+thead th:nth-of-type(n+6) {
+   color: black;
+   background-color: rgb(252, 181, 56);
+}
+
+
+/* Table Footer Styles */
+tfoot {
+   color: black;
+   background-color: white;
+   text-align: center;
+}
+
+/* Mobile Devices: 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+
+   table,
+   tbody,
+   tr,
+   td#schedule,
+   th {
+      display: block;
+   }
+
+   thead,
+   tfoot {
+      display: none;
+   }
+
+   tbody td#schedule {
+      position: relative;
+      padding: 10%;
+      color: black;
+      background-color: rgba(136, 15, 15, 0.2);
+   }
+
+   td#schedule::before {
+      content: attr(data-label);
+      position: absolute;
+      top: 2px;
+      left: 0px;
+      width: 20%;
+   }
+
+   td#schedule:nth-of-type(n+6) {
+      color: black;
+      background-color: rgba(252, 181, 56, 0.2);
+   }
+}
+
+
+/* Tablet Devices: 481px to 768px */
+
+@media only screen and (min-width: 481px) {
+   td#schedule {
+      word-wrap: break-word;
+   }
+}
+
+
+/* Desktop Devices: 769px and wider */
+
+@media only screen and (min-width: 769px) {}

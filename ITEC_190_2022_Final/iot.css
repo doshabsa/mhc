@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/* Section Styles */
+section {
+   display: flex;
+   flex-direction: column;
+   flex: inherit;
+   justify-content: space-between;
+   margin: 0% 5% 5%;
+}
+
+
+/* Table Styles */
+div#deviceHolder1 {
+   width: 65%;
+   border: 2px;
+   border-style: solid;
+   align-items: center;
+   border-color: rgba(184, 69, 23, 1);
+   border-radius: 8px;
+   box-shadow: rgba(0, 0, 0, 1) 15px 15px 15px;
+}
+
+div#deviceHolder2 {
+   width: 65%;
+   border: 2px;
+   border-style: solid;
+   align-items: center;
+   border-color: rgba(128, 158, 59, 1);
+   border-radius: 8px;
+   box-shadow: rgba(0, 0, 0, 1) -15px 15px 15px;
+}
+
+td {
+   padding: 2%;
+}
+
+ul#examples {
+   list-style-position: inside;
+   list-style-type: circle;
+   padding-left: 5%;
+}
+
+
+/* Table 1 Styles */
+article#device1 {
+   display: flex;
+   flex-direction: row;
+   flex: inherit;
+   justify-content: space-between;
+   width: 100%;
+   margin-top: 5%;
+   text-align: justify;
+   align-items: left;
+}
+
+table#device1 {
+   width: 100%;
+   border-collapse: collapse;
+   font-family: Arial, Verdana, sans-serif;
+   background-image: url(Images/board.png);
+   filter: grayscale(25%);
+   background-repeat: no-repeat;
+   background-size: auto;
+}
+
+table#device1>thead {
+   font-family: LibreBaskerville, Headway;
+   color: rgba(230, 203, 189, 1);
+   font-size: 1.5em;
+   line-height: 2em;
+   background: rgb(0,30,18);
+   background: linear-gradient(118deg, rgba(0,30,18,0.7035013834635417) 0%, rgba(184,69,23,0.8519607672170431) 45%, rgba(230,203,189,0.8463585263206845) 93%);  
+   padding: 0% 0% 0%;
+   text-align: center;
+   margin-bottom: 1%;
+}
+
+table#device1>tbody{
+   color: rgba(0, 30, 18, 1);
+}
+
+table#device1>tfoot {
+   color: rgba(230, 203, 189, 1);
+   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
+   background-color: rgba(184, 69, 23, 0.5);
+   font-size: 0.8em;
+   line-height: 1.5em;
+   text-align: center;
+}
+
+
+/* -------------------------------------------------------------- Table 2 Styles */
+article#device2 {
+   display: flex;
+   flex-direction: row;
+   flex: inherit;
+   justify-content: space-between;
+   width: 100%;
+   margin-top: 5%;
+   text-align: justify;
+   align-items: right;
+}
+
+table#device2 {
+   width: 100%;
+   border-collapse: collapse;
+   font-family: Arial, Verdana, sans-serif;
+   background-image: url(Images/hydroponics.jpg);
+   filter: grayscale(50%);
+   background-repeat: no-repeat;
+   background-size: auto;
+}
+
+table#device2>thead {
+   font-family: LibreBaskerville, Headway;
+   color: rgba(0, 30, 18, 1);
+   font-size: 1.5em;
+   line-height: 2em;
+   background: rgb(0, 30, 18);
+   background: linear-gradient(180deg, rgba(0, 30, 18, 0.55) 0%, rgba(128, 158, 59, 0.80) 48%, rgba(230, 203, 189, 0.50) 100%);
+   padding: 0% 0% 0%;
+   text-align: center;
+   margin-bottom: 1%;
+}
+
+table#device2>tbody {
+   color: rgba(0, 30, 18, 1);
+}
+
+table#device2>tfoot {
+   color: rgba(0, 30, 18, 1);
+   background-color: rgba(128, 158, 59, 0.4);
+   font-size: 0.8em;
+   line-height: 1.5em;
+   text-align: center;
+}
+
+
+/* --------------------------------------------------- Table 3 Styles */
+table#device3 {
+   width: 100%;
+   border-collapse: collapse;
+   font-family: Arial, Verdana, sans-serif;
+   background-image: url(Images/coffeebeans.jpg);
+   filter: grayscale(20%);
+   background-repeat: no-repeat;
+   background-size: auto;
+}
+
+table#device3>thead {
+   font-family: LibreBaskerville, Headway;
+   color: rgba(230, 203, 189, 1);
+   font-size: 1.5em;
+   line-height: 2em;
+   background: rgb(0, 30, 18);
+   background: radial-gradient(circle, rgba(0, 30, 18, 1) 0%, rgba(184, 69, 23, 1) 24%, rgba(0, 30, 18, 0.7595237924271271) 93%);
+   padding: 0% 0% 0%;
+   text-align: center;
+   margin-bottom: 1%;
+}
+
+table#device3>tbody {
+   color: rgba(230, 203, 189, 1);
+}
+
+table#device3>tfoot {
+   color: rgba(230, 203, 189, 1);
+   background-color: rgba(184, 69, 23, 0.6);
+   font-size: 0.8em;
+   line-height: 1.5em;
+   text-align: center;
+}
+
+
+/* Mobile Devices: 0 to 550px */
+@media only screen and (max-width: 550px) {
+
+   article#device1>img,
+   article#device2>img,
+   article#device3>img {
+      display: none;
+   }
+
+   div#deviceHolder1,
+   div#deviceHolder2 {
+      width: 100%;
+   }
+}
+
+
+/* Tablet Devices: 550px to 769px */
+@media only screen and (max-width: 769px) {
+   article#device1>img,
+   article#device2>img,
+   article#device3>img {
+      display: none;
+   }
+
+   div#deviceHolder1,
+   div#deviceHolder2 {
+      width: 100%;
+   }
+}
+
+
+/* Desktop Devices: 770px and wider */
+@media only screen and (min-width: 770px) {
+   div#deviceHolder1 {
+      width: 65%;
+      border: 2px;
+      border-style: solid;
+      align-items: center;
+      border-color: rgba(184, 69, 23, 1);
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 1) 15px 15px 15px;
+   }
+   
+   div#deviceHolder2 {
+      width: 65%;
+      border: 2px;
+      border-style: solid;
+      align-items: center;
+      border-color: rgba(128, 158, 59, 1);
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 1) -15px 15px 15px;
+   }
+
+   article#device1>img#device1 {
+      display: flex;
+      flex-direction: row;
+      flex: inherit;
+      object-fit: cover;
+      width: 32%;
+      height: auto;
+      border: 2px;
+      border-style: solid;
+      border-color: rgba(184, 69, 23, 1);
+      box-shadow: rgba(0, 0, 0, 1) -15px 15px 15px;
+      border-radius: 50%;
+   }
+
+   article#device2>img#device2 {
+      display: flex;
+      flex-direction: row;
+      flex: inherit;
+      object-fit: cover;
+      width: 32%;
+      height: auto;
+      border: 2px;
+      border-style: solid;
+      border-color: rgba(128, 158, 59, 1);
+      box-shadow: rgba(0, 0, 0, 1) -15px 15px 15px;
+      border-radius: 50%;
+   }
+
+   article#device1>img#device3 {
+      display: flex;
+      flex-direction: row;
+      flex: inherit;
+      object-fit: cover;
+      width: 32%;
+      height: auto;
+      border: 2px;
+      border-style: solid;
+      border-color: rgba(184, 69, 23, 1);
+      box-shadow: rgba(0, 0, 0, 1) -15px 15px 15px;
+      border-radius: 50%;
+      background-color: rgba(230, 203, 189, 0.3);
+   }
+}

@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: LibreBaskerville;
+    src: url('LibreBaskerville.ttf') format('truetype');
+    font-family: Headway;
+    src: url('headway.ttf') format('truetype');
+    font-family: Roboto;
+    src: url('Roboto-Regular.ttf') format('truetype');
+}
+
+/* COLORS
+Dark green - 001e12 rgba(0, 30, 18, 1)
+Cream - e6cbbd rgba(230, 203, 189, 1)
+Light green - 809e3b rgba(128, 158, 59, 1)
+Orange - b84517 rgba(184, 69, 23, 1)
+
+*/
+
+/* HTML Styles */
+html {
+    background: rgba(0, 30, 18, 1);
+    height: 100%;
+    font-family: Roboto, Calibri, sans-serif;
+    color: rgb(230, 203, 189);
+    font-size: 1.3em;
+}
+
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 30, 18, 1);
+    margin: 0px;
+    min-height: 100%;
+    /* Body widths are in the media device types */
+}
+
+
+/* Body Header Styles */
+header {
+    width: 100%;
+}
+
+
+/* Horizonal Navigation Styles */
+nav.header {
+    padding: 1% 0% 1%;
+    flex-direction: row nowrap;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    background-color: rgba(0, 30, 18, 1);
+    text-align: center;
+    font-family: LibreBaskerville, serif;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+nav.header ul li a:visited,
+nav.header ul li a:link {
+    color: rgba(230, 203, 189, 1);
+    text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: ease 0.25s;
+}
+
+nav.header ul li a:hover,
+nav.header ul li a:active {
+    color: rgba(184, 69, 23, 1);
+    text-shadow: rgba(184, 69, 23, 0.5) 0px 10px 5px;
+    transition: color 0.1s ease-out;
+    transform: scale(1, 1) translateY(-5);
+}
+
+
+/* Index Banner Styles */
+div#bannerImages {
+    clear: none;
+}
+
+#banner {
+    opacity: 1;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* transition: opacity 1s ease-in-out; */
+}
+
+
+/* Heading Styles */
+h1 {
+    font-family: LibreBaskerville;
+    color: rgb(230, 203, 189, 1);
+    font-size: 1.5em;
+    background-color: rgba(128, 158, 59, 1);
+    line-height: 1.5em;
+    padding: 0.5% 5% 0.5%;
+    text-align: center;
+}
+
+h2 {
+    font-family: LibreBaskerville;
+    color: rgba(230, 203, 189, 1);
+    font-size: 1.5em;
+    background-color: rgba(184, 69, 23, 1);
+    line-height: 1.5em;
+    padding: 0.5% 5% 0.5%;
+    text-align: center;
+}
+
+
+/* Horizontal Line for Banner Divide Style */
+h5.line {
+    position: relative;
+    width: 100%;
+    border: 10px solid;
+    border-color: rgba(128, 158, 59, 1);
+    background-color: rgba(128, 158, 59, 1);
+    margin-bottom: 10px;
+}
+
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgba(230, 203, 189, 1);
+    color: rgba(184, 69, 23, 1);
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+
+/* Footer Link Styles */
+footer a:link,
+footer a:visited {
+    color: rgba(0, 30, 18, 1);
+    font-size: 1em;
+    text-decoration: none;
+    transition: ease-in-out .50s;
+}
+
+footer a:hover,
+footer a:active {
+    color: rgba(128, 158, 59, 1);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+/* Mobile Devices: 0 to 550px */
+@media only screen and (max-width: 550px) {
+    nav.header ul li a {
+        text-align: center;
+        font-size: 1em;
+        letter-spacing: 0.2em;
+        line-height: 2em;
+    }
+
+    /* Mobile Navicon Menu Styles */
+    a#navicon {
+        display: block;
+        text-align: center;
+    }
+
+    /* Mobile Navigation Styles */
+    nav.header ul {
+        display: none;
+    }
+
+    a#navicon:hover+ul,
+    nav.header ul:hover {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: space-around;
+        align-content: center;
+        background-color: rgba(0, 30, 18, 1);
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+
+/* Tablet Devices: 550px to 769px */
+@media only screen and (min-width: 885px) {
+
+    /* Tablet Navicon Styles */
+    a#navicon {
+        display: none;
+    }
+
+    /* Tablet Navigation Styles */
+    nav.header li {
+        font-size: 1.2em;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    nav.header ul {
+        display: flex;
+        flex-direction: row wrap;
+        flex: 1 1 auto;
+        justify-content: space-between;
+        align-content: center;
+    }
+}
+
+
+/* Desktop Devices: 770px and wider */
+@media only screen and (min-width: 880px) {
+
+    html {
+        background: rgba(0, 30, 18, 1) url(Images/bg.png) center center no-repeat fixed content-box;
+    }
+
+    /* HTML and Body Styles */
+    body {
+        width: 75%;
+        margin: 0px auto;
+        border: 2px;
+        border-color: rgb(0, 0, 0);
+    }
+}

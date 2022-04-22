@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Catshop;
+    src: url('Catshop.ttf') format('truetype');
+    font-family: Headway;
+    src: url('headway.ttf') format('truetype');
+}
+
+
+/* HTML Settings */
+
+html {
+    background: rgb(27, 27, 27) url(bg.png) top right repeat fixed;
+    height: 100%;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 12px;
+}
+
+
+/* Body Settings */
+
+body {
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0, 0, 0) 5px 0px 15px, rgb(0, 0, 0) -5px 0px 15px;
+    margin: 0px auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Body widths are in the media device types! */
+}
+
+
+/* Body Header Settings */
+h1 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Headway;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: rgb(0, 0, 0) 2px 2px 3px;
+    /* Text size settings found in styles.css @media */
+}
+
+h2 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: rgb(136,15,15);
+    font-family: CatShop;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: rgb(0, 0, 0) 1px 1px 10px;
+    /* Text size settings found in styles.css @media */
+}
+
+/* Horizonal Navigation Settings */
+
+nav.horizontal {
+    background-color: rgb(0, 0, 0);
+    clear: both;
+    text-align: center;
+    font-family: Catshop;
+    font-size: 1.3em;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+nav.horizontal ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+}
+
+nav.horizontal ul li a:visited,
+nav.horizontal ul li a:link {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+nav.horizontal ul li a:hover,
+nav.horizontal ul li a:active {
+    color: rgb(252, 181, 56);
+}
+
+
+/* Section Styles */
+
+section#main {
+    display: block;
+    width: 95%;
+    margin: 2em auto;
+    text-align: justify;
+}
+
+
+/* Article Styles */
+
+
+
+/* Aside Styles */
+
+aside {
+    justify-self: center;
+    background: radial-gradient(rgb(27, 27, 27), rgb(27, 27, 27), rgb(252, 181, 56));
+    border: 10px double rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10%;
+    width: 95%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 0em;
+    background-color: rgb(0, 0, 0);
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+}
+
+.footerTable {
+    width: 100%;
+}
+
+.footerTable td a:link,
+.footerTable td a:visited,
+.footerTable td a:hover,
+.footerTable td a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/* Mobile Devices: 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+    nav.horizontal ul li a {
+        text-align: center;
+        font-size: 1em;
+        letter-spacing: 0.2em;
+        line-height: 2em;
+    }
+
+    aside {
+        justify-self: center;
+        background: none;
+        border: none;
+        border-radius: none;
+        width: 95%;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    /* Mobile Carousel Settings */
+    .carousel::before,
+    .carousel::after {
+        font-size: 2em;
+    }
+
+    .carousel__news {
+        font-size: 2em;
+    }
+
+    /* Mobile Navicon Menu Settings */
+    a#navicon {
+        display: block;
+        text-align: center;
+    }
+
+    nav.horizontal ul {
+        display: none;
+        z-index: 99;
+    }
+
+    a#navicon:hover+ul,
+    nav.horizontal ul:hover {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+    }
+
+    /* H1 Settings */
+    h1 {
+        font-size: 3em;
+        line-height: 1em;
+    }
+
+    /* H2 Settings */
+    h2 {
+        font-size: 2.5em;
+        line-height: 1em;
+    }
+
+    img#imgSocials {
+        width: 1.5em;
+        height: auto;
+    }
+
+    .footerTable>td#socials {
+        justify-content: center;
+    }
+}
+
+
+/* Tablet Devices: 481px to 768px */
+
+@media only screen and (min-width: 481px) {
+
+    /* Tablet Carousel Settings */
+    .carousel::before,
+    .carousel::after {
+        font-size: 4em;
+    }
+
+    .carousel__news {
+        font-size: 4em;
+    }
+
+    /* Tablet Navigation Settings */
+    nav.horizontal li {
+        font-size: 1.2em;
+    }
+
+    nav.horizontal ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    }
+
+    nav.horizontal li {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    /* H1 Settings */
+    h1 {
+        font-size: 3.5em;
+        line-height: 1em;
+    }
+
+    /* H2 Settings */
+    h2 {
+        font-size: 4em;
+        line-height: 1em;
+    }
+
+    /* Tablet Navicon Settings */
+    a#navicon {
+        display: none;
+    }
+
+    img#imgSocials {
+        width: 2.5em;
+        height: auto;
+    }
+
+}
+
+
+/* Desktop Devices: 769px and wider */
+
+@media only screen and (min-width: 769px) {
+
+    /* HTML and Body Settings */
+    html {
+        background: rgb(27, 27, 27) url(bg.png) center center no-repeat fixed content-box;
+    }
+
+    body {
+        width: 80%;
+        max-width: 900px;
+        margin: 0px auto;
+    }
+
+    /* H1 Settings */
+    h1 {
+        font-size: 4em;
+        line-height: 1em;
+    }
+
+    /* H2 Settings */
+    h2 {
+        font-size: 5em;
+        line-height: 1em;
+    }
+
+    /* Desktop Carousel Settings */
+    .carousel::before,
+    .carousel::after {
+        font-size: 5em;
+    }
+
+    .carousel__news {
+        font-size: 5em;
+    }
+
+    img#imgSocials {
+        width: 3.5em;
+        height: auto;
+    }
+}

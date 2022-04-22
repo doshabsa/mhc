@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+@font-face {
+   font-family: Catshop;
+   src: url('Catshop.ttf') format('truetype');
+   font-family: Headway;
+   src: url('headway.ttf') format('truetype');
+}
+
+table#DMs1,
+table#DMs2 {
+   width: 100%;
+   border: 0px solid rgb(27, 27, 27);
+   border-collapse: collapse;
+   table-layout: fixed;
+   font-size: 1.2em;
+}
+
+table#DMs1 tr>th,
+table#DMs1 tr>td,
+table#DMs2 tr>th,
+table#DMs2 tr>td {
+   border: 0px solid rgb(27, 27, 27);
+   text-align: center;
+   padding: 0.5%;
+}
+
+#DMimage {
+   width: 30%;
+   height: auto;
+   vertical-align: middle;
+}
+
+
+/* Table Caption Styles */
+caption {
+   caption-side: bottom;
+   text-align: center;
+}
+
+
+/* Card Styles */
+.divCard {
+   /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+   transition: 0.3s;
+   border: 1px solid rgb(252, 181, 56);
+   border-radius: 15px;
+   padding: 2px;
+   padding-bottom: 0px;
+   width: 100%;
+   height: auto;
+   /* 5px rounded corners */
+}
+
+/* Add some padding inside the card container */
+.cardContainer {
+   padding: 1%;
+}
+
+.cardContainer h3 {
+   font-size: 1.5em;
+   padding: 3%;
+   color: rgb(136, 15, 15);
+   text-shadow: rgba(27, 27, 27, 0.5) 0 4px 8px;
+}
+
+.cardContainer b {
+   color: rgb(136, 15, 15);
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img#imgCard {
+   width: 100%;
+   height: auto;
+   border-radius: 15px;
+}
+
+
+/* Mobile Devices: 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+
+   table,
+   tbody,
+   tr,
+   td#DMs1,
+   td#DMs2 {
+      display: block;
+   }
+
+   th {
+      display: none;
+   }
+}
+
+
+/* Tablet Devices: 481px to 768px */
+
+@media only screen and (min-width: 481px) {
+
+   td#DMs1,
+   td#DMs2 {
+      word-wrap: break-word;
+   }
+
+   #DMimage {
+      width: 50%;
+      height: auto;
+      vertical-align: middle;
+   }
+}
+
+
+/* Desktop Devices: 769px and wider */
+
+@media only screen and (min-width: 769px) {
+
+   #DMimage {
+      width: 35%;
+      height: auto;
+      vertical-align: middle;
+   }
+}
