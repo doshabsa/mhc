@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PuzzleCraft_v2/1.0.0": {
+        "runtime": {
+          "PuzzleCraft_v2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PuzzleCraft_v2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

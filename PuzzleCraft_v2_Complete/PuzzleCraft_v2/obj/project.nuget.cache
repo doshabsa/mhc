@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YWbUulaATiga6IbZgLgMrdkh2FLo6pr50sKvs3sJL4YCNPHvJ4YCqJstp2mpbeotv6stdxhEoxH8vFUwr2G54A==",
+  "success": true,
+  "projectFilePath": "F:\\ITEC145\\PuzzleCraft_v2\\PuzzleCraft_v2_Complete\\PuzzleCraft_v2\\PuzzleCraft_v2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kayla.purcha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
